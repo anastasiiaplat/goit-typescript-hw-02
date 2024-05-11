@@ -1,25 +1,23 @@
 
+import { Photo } from '../../types'
+import { FC} from "react";
 
-const ImageCard = ({ img, onImageClick }) => {
-  const imageData = {
-    imageSrc: img.urls.regular,
-    imageAltDescription: img.alt_description,
-    imageDescription: img.description,
-   
-  };
+interface ImageCardProps {
+  photo: Photo;
+  openModal: (photo: Photo) => void;
 
-  return (
-   
-      <img
-        onClick={() => onImageClick(imageData)}
-        src={img.urls.small}
-        alt={img.alt_description}
-        width={310}
-        height={200}
-      />
-      
+}
+
+const ImageCard:FC<ImageCardProps> = ({ photo,openModal}) => {
   
-  );
-};
+  return (
+      <div>
+          <img src={photo.urls.small} alt={photo.alt_description} onClick={()=>openModal(photo)}/>
+      </div>
+  
 
-export default ImageCard;
+
+  )
+}
+
+export default ImageCard

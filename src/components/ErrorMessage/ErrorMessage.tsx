@@ -1,23 +1,9 @@
+import { FC } from "react"
 
-import { Photo } from '../../types'
-import { FC} from "react";
-
-interface ImageCardProps {
-  photo: Photo;
-  openModal: (photo: Photo) => void;
-
-}
-
-const ImageCard:FC<ImageCardProps> = ({ photo,openModal}) => {
-  
+const ErrorMessage: FC = () => {
   return (
-      <div>
-          <img  src={photo.urls.small} alt={photo.alt_description} onClick={()=>openModal(photo)}/>
-      </div>
-  
-
-
+        <p>Whoops, something went wrong! Please try reloading this page!</p>
   )
 }
 
-export default ImageCard
+export default ErrorMessage
