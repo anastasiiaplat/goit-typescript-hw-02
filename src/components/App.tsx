@@ -3,7 +3,7 @@ import SearchBar from './SearchBar/SearchBar.js';
 import Loader from "./Loader/Loader.js";
 import ErrorMessage from "./ErrorMessage/ErrorMessage.js";
 import ImageGallery from "./ImageGallery/ImageGallery.js";
-import { fetchPhotosByInput } from "../ photos-api.ts";
+import { fetchPhotosByInput } from "../ photos-api.js";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn.js";
 import ImageModal from "./ImageModal/ImageModal.js";
 import ScrollIntoView from 'react-scroll-into-view'
